@@ -44,7 +44,6 @@ module.exports = function (options) {
   function start() {
     proc = spawn(procCommand, procArgs, procOptions);
 
-    proc.stdin.pipe(process.stdin);
     proc.stdout.pipe(process.stdout);
     proc.stderr.pipe(process.stderr);
 
