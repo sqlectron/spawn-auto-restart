@@ -1,0 +1,27 @@
+{
+  "name": "spawn-auto-restart",
+  "version": "1.0.0",
+  "description": "spawn-auto-restart",
+  "main": "src/index.js",
+  "author": "Max Claus Nunes <maxcnunes@gmail.com>",
+  "scripts": {
+    "test": "eslint src/"
+  },
+  "keywords": [
+    "spawn",
+    "watch",
+    "auto",
+    "restart"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxcnunes/spawn-auto-restart"
+  },
+  "dependencies": {
+    "chokidar": "^1.2.0",
+    "debug": "^2.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^1.7.1"
+  }
+}
