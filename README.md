@@ -48,6 +48,8 @@ require('spawn-auto-restart')({
 
 Auto restarting an [electron](https://github.com/atom/electron) app in development when changes have been applied in the main process.
 
+![](https://www.dropbox.com/s/gxird1lr72tq56s/spawn-auto-restart.gif?raw=1)
+
 **restart.js**
 ```js
 #!/usr/bin/env node
