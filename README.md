@@ -64,7 +64,7 @@ require('spawn-auto-restart')({
   debug: true,
   proc: {
     command: electron,
-    args: [main, '--dev']
+    args: main
   },
   watch: watch
 });
