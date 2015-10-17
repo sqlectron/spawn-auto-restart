@@ -24,9 +24,7 @@ module.exports = function (options) {
     if (!Array.isArray(procArgs)) {
       procArgs = (procArgs || '').split(' ');
     }
-    delete options.proc.path;
-    delete options.proc.args;
-    procOptions = options.proc;
+    procOptions = cloneObjWithoutProps(options.proc, ['command', 'args']);
   }
 
   // allows use all options available for chokidar
@@ -34,8 +32,7 @@ module.exports = function (options) {
   var watchOptions;
   if (!Array.isArray(options.watch) && typeof options.watch !== 'string') {
     watchPath = options.watch.path;
-    delete options.watch.path;
-    watchOptions = options.watch;
+    procOptions = cloneObjWithoutProps(options.watch, ['path']);
   }
 
   /**
@@ -74,3 +71,13 @@ module.exports = function (options) {
     proc.kill('SIGINT');
   });
 };
+
+
+function cloneObjWithoutProps(src, props) {
+  return Object.keys(src)
+    .filter(function (key) { return ~props.indexOf(key); })
+    .reduce(function (obj, key) {
+      obj[key] = src[key];
+      return obj;
+    }, {});
+}
