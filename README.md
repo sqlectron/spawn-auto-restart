@@ -21,6 +21,12 @@ require('spawn-auto-restart')({
 });
 ```
 
+To enable logs set an environment variable like this:
+
+```shell
+DEBUG=spawn-auto-restart
+```
+
 **advanced args options**
 
 * [spawn](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options)
@@ -28,7 +34,6 @@ require('spawn-auto-restart')({
 
 ```js
 require('spawn-auto-restart')({
-  debug: true,
   proc: {
     command: 'executable path',
     // ... any spawn argument
@@ -50,7 +55,7 @@ Auto restarting an [electron](https://github.com/atom/electron) app in developme
 
 ![](https://www.dropbox.com/s/gxird1lr72tq56s/spawn-auto-restart.gif?raw=1)
 
-**restart.js**
+**node DEBUG=spawn-auto-restart restart.js**
 ```js
 #!/usr/bin/env node
 
@@ -63,7 +68,6 @@ var watch = join(__dirname, '../src/browser');
 
 
 require('spawn-auto-restart')({
-  debug: true,
   proc: {
     command: electron,
     args: main

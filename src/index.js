@@ -1,6 +1,6 @@
 var spawn = require('child_process').spawn;
 var chokidar = require('chokidar');
-var debug = require('debug');
+var debug = require('debug')('spawn-auto-restart');
 
 
 module.exports = function (options) {
@@ -10,9 +10,6 @@ module.exports = function (options) {
 
   var proc;
   var restarting = false;
-
-  if (options.debug) { debug.enable('spawn-auto-restart'); }
-  var log = debug('spawn-auto-restart');
 
   // allows use all options available for spawn
   var procCommand = options.proc;
@@ -53,7 +50,7 @@ module.exports = function (options) {
     };
 
     proc.on('error', function () {
-      log('restarting due error');
+      debug('restarting due error');
       restarting = true;
       proc.kill('SIGINT');
     });
@@ -66,7 +63,7 @@ module.exports = function (options) {
 
   // starts watching
   chokidar.watch(watchPath, watchOptions).on('change', function() {
-    log('restarting due changes');
+    debug('restarting due changes');
     restarting = true;
     proc.kill('SIGINT');
   });
