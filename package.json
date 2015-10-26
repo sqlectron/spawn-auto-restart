@@ -1,6 +1,6 @@
 {
   "name": "spawn-auto-restart",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "spawn-auto-restart",
   "main": "src/index.js",
   "author": "Max Claus Nunes <maxcnunes@gmail.com>",
