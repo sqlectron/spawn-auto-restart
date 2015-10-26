@@ -77,6 +77,11 @@ require('spawn-auto-restart')({
 ```
 
 
+## Changelog
+
+**2.0.0**: [Move debug option to env variable](https://github.com/maxcnunes/spawn-auto-restart/commit/e8d85d7681d64ec9d8b1e5cefff25857208c070a).
+
+
 ## Contributing
 
 It is required to use [editorconfig](http://editorconfig.org/).
