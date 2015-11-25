@@ -32,14 +32,15 @@ module.exports = function (options) {
     procOptions = cloneObjWithoutProps(options.watch, ['path']);
   }
 
+  // pipe all outputs and preserve colors
+  procOptions = procOptions || {};
+  procOptions.stdio = 'inherit';
+
   /**
    * start the child process
    */
   function start() {
     proc = spawn(procCommand, procArgs, procOptions);
-
-    proc.stdout.pipe(process.stdout);
-    proc.stderr.pipe(process.stderr);
 
     var onClose = function (code) {
       if (!restarting) {
