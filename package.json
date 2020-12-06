@@ -18,10 +18,13 @@
     "url": "https://github.com/maxcnunes/spawn-auto-restart"
   },
   "dependencies": {
-    "chokidar": "^1.2.0",
-    "debug": "^2.2.0"
+    "chokidar": "^3.4.2",
+    "debug": "^4.1.1"
   },
   "devDependencies": {
     "eslint": "^1.7.1"
+  },
+  "engines": {
+    "node": ">= 8.10.0"
   }
 }
