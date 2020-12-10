@@ -79,9 +79,9 @@ require('spawn-auto-restart')({
 
 ## Changelog
 
-**3.0.0**: Update dependencies to latest versions, set Node 10.13 as minimum supported version.
-**2.0.1**: [Preserve output colors](https://github.com/sqlectron/spawn-auto-restart/commit/1dbdcdaab3a9b64c47c2f2e0e4fae3cb2327de31).
-**2.0.0**: [Move debug option to env variable](https://github.com/maxcnunes/spawn-auto-restart/commit/e8d85d7681d64ec9d8b1e5cefff25857208c070a).
+* **3.0.0**: Update dependencies to latest versions, set Node 10.13 as minimum supported version.
+* **2.0.1**: [Preserve output colors](https://github.com/sqlectron/spawn-auto-restart/commit/1dbdcdaab3a9b64c47c2f2e0e4fae3cb2327de31).
+* **2.0.0**: [Move debug option to env variable](https://github.com/maxcnunes/spawn-auto-restart/commit/e8d85d7681d64ec9d8b1e5cefff25857208c070a).
 
 
 ## Contributing
