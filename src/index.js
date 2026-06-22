@@ -29,7 +29,7 @@ module.exports = function (options) {
   var watchOptions;
   if (!Array.isArray(options.watch) && typeof options.watch !== 'string') {
     watchPath = options.watch.path;
-    procOptions = cloneObjWithoutProps(options.watch, ['path']);
+    watchOptions = cloneObjWithoutProps(options.watch, ['path']);
   }
 
   // pipe all outputs and preserve colors
